@@ -1,5 +1,5 @@
 # MyMind
-双击 save_mind.py 运行
+双击 save_mind.py 运行 ,
 双击 mind_soft.html 进入
 
 个人思维导图软件
