@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../jsmind-master/style/jsmind.css">
+		<script src="../jsmind-master/js/jsmind.js"></script>
+		<script src="../jsmind-master/js/jsmind.draggable.js"></script>
+		<script src="metacontrol.js"></script>
+
+		<title>LeHa 的私人思维导图绘制软件</title>
+		<style>
+
+			#add_mind_master{
+				width: 40vw;
+				height:10vw;
+				background-color: rgba(1,1,1,0.2);
+				text-align: center;
+				margin: 3vw auto;
+				border-radius: 0.5vw;
+				border: 0.2vw black solid;
+				transition: background-color .1s;
+				
+			}
+
+			#add_mind_master:hover{
+				background-color: rgba(198, 198, 198, 0.5);
+			}
+
+			.mind_master{
+				width: 72vw;
+				height: 36vw;
+				background-color: rgba(232, 232, 232, 0.8);
+			}
+			html{
+				min-height: 100vh;
+				background-image: url(img/background.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size:cover;
+			}
+			body{
+				
+				margin: 0;
+				padding: 0;
+		
+			}
+			div{
+				color:  white;
+				text-align: center;
+				line-height: 30px;
+			}
+			.clickfont{
+				display: block;
+				margin: 0;
+				width: 5vw;
+				height: 4vw;
+				text-align: center;
+				font-size: 1vw !important;
+				line-height: 4vw;
+			}
+			.tools{
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				background-color: rgba(200,10,10,0.6);
+				height: 5vw;
+				
+			}
+			.tools div{
+				width: 5vw;
+				height: 4vw;
+				position: relative;
+				overflow: hidden;
+				border-radius: 0.1vw;
+				background-color: rgba(181, 235, 30, 0.6);
+				text-align: center;
+				transition: background-color .2s;
+			}
+			.tools div:hover{
+				cursor: pointer;
+				background-color: rgba(217, 235, 156, 0.8);
+			}
+			
+			.tools input{
+				width: 5vw;
+				height: 4vw;
+				opacity: 0;
+				position: absolute;
+				z-index: -1;
+		
+			}
+			.out_c{
+				width: 72vw;
+				height: 40vw;
+				margin: 3vw auto;
+				
+				background-color: rgba(232, 232, 232, 0.2);
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id = "add_mind_master" style="line-height: 160px; font-size: 40px;" onclick = "add_master()">
+			进入
+		</div>
+	</body>
+	<script type="text/javascript">
+		function add_master(){
+			document.body.innerHTML='<div class="out_c"> <div class="tools"> <div onclick="create_mind(this)"> 创建导图 </div> <div onclick="open_file_click(this)"><input type="file" onchange="open_file(this)"> 打开文件 </div> <div onclick="send_mind(get_out_c(this))"> 保存文件 </div> <div onclick="open_image_click(this)"><input type="file" , onchange="get_image(this)"> 插入图片 </div> <div onclick="expand(this)"> 展开节点 </div> <div onclick="replay(this)"> 边框 </div> </div> <div class="mind_master"></div> </div> '+document.body.innerHTML;
+			
+		}
+	</script>
+</html>
