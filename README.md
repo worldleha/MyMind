@@ -5,12 +5,17 @@
 个人思维导图软件
 
    按键
-   addchild <Insert>
-   addbrother <Enter>
-   editnode <F2>
-   delnode  <Delete>
-   toggle <Space>
-   left <Left>
-   up <Up>
-   right  <Right>
-   down <Down>
+   <table>
+   <tr>
+   <td>addchild</td>
+   <td>Insert</td>
+   </tr>
+   addbrother Enter
+   editnode F2
+   delnode  Delete
+   toggle Space
+   left Left
+   up Up
+   right  Right
+   down Down
+   </table>
